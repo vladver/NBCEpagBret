@@ -6,5 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <NoDefaultLaunchSettingsFile>True</NoDefaultLaunchSettingsFile>
     </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="MudBlazor" Version="7.4.0" />
+    </ItemGroup>
 
 </Project>
