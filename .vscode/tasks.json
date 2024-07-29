@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build all",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile",
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Publish Manager",
+            "command": "dotnet",
+            "type": "shell",            
+            "args": [
+                "publish",
+                "${workspaceFolder}/Presentation/NBCEpagBret.Manager/NBCEpagBret.Manager.csproj",
+                "--configuration",
+                "Release",
+                "--output",
+                "h:/NBCEpagBret/Manager",
+                "--no-self-contained",
+                "--framework",
+                "net8.0",
+                "--runtime",
+                "linux-x64"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Clean Manager destination"]
+        },
+        {
+            "label": "Publish Website",
+            "command": "dotnet",
+            "type": "shell",            
+            "args": [
+                "publish",
+                "${workspaceFolder}/Presentation/NBCEpagBret.Website/NBCEpagBret.Website.csproj",
+                "--configuration",
+                "Release",
+                "--output",
+                "h:/NBCEpagBret/Website",
+                "--no-self-contained",
+                "--framework",
+                "net8.0",
+                "--runtime",
+                "linux-x64"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Clean Website destination"]
+        },
+        {
+            "label": "Clean Manager destination",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args":[
+                "h:/NBCEpagBret/Manager",
+                "-Recurse",
+                "-Force",
+                "-Confirm:$false"
+            ]
+        },
+        {
+            "label": "Clean Website destination",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args":[
+                "h:/NBCEpagBret/Website",
+                "-Recurse",
+                "-Force",
+                "-Confirm:$false"
+            ]
+        }
+    ]
+}
