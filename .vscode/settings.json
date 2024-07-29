@@ -1,0 +1,6 @@
+{
+    "dotnet.defaultSolution": "NBCEpagBret.sln",
+    "editor.rulers": [
+        80
+    ],
+}
