@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBCEpagBret.Manager", "Presentation\NBCEpagBret.Manager\NBCEpagBret.Manager.csproj", "{042CBBF6-37F3-4087-BFCE-763672644105}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBCEpagBret.Website", "Presentation\NBCEpagBret.Website\NBCEpagBret.Website.csproj", "{EF02935A-3AFD-4C70-BA6E-01D28A259E19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{042CBBF6-37F3-4087-BFCE-763672644105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042CBBF6-37F3-4087-BFCE-763672644105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042CBBF6-37F3-4087-BFCE-763672644105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF02935A-3AFD-4C70-BA6E-01D28A259E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF02935A-3AFD-4C70-BA6E-01D28A259E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF02935A-3AFD-4C70-BA6E-01D28A259E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF02935A-3AFD-4C70-BA6E-01D28A259E19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{042CBBF6-37F3-4087-BFCE-763672644105} = {B736B21F-9A7D-413A-8783-222771648726}
+		{EF02935A-3AFD-4C70-BA6E-01D28A259E19} = {B736B21F-9A7D-413A-8783-222771648726}
 	EndGlobalSection
 EndGlobal
