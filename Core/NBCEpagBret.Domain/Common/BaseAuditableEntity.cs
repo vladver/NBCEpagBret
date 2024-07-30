@@ -1,3 +1,4 @@
+using MongoDB.Bson;
 using NBCEpagBret.Domain.Common.Interfaces;
 
 namespace NBCEpagBret.Domain.Common
@@ -9,13 +10,13 @@ namespace NBCEpagBret.Domain.Common
     public abstract class BaseAuditableEntity : BaseEntity, IAuditableEntity
     {
         /// <inheritdoc/>
-        public String? CreatedBy { get; set; }
+        public ObjectId? CreatedBy { get; set; }
 
         /// <inheritdoc/>
         public DateTime? CreatedDateTime { get; set; }
 
         /// <inheritdoc/>
-        public String? UpdatedBy { get; set; }
+        public ObjectId? UpdatedBy { get; set; }
 
         /// <inheritdoc/>
         public DateTime? UpdatedDateTime { get; set; }

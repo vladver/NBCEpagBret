@@ -1,3 +1,5 @@
+using MongoDB.Bson;
+
 namespace NBCEpagBret.Domain.Common.Interfaces
 {
     /// <summary>
@@ -8,6 +10,6 @@ namespace NBCEpagBret.Domain.Common.Interfaces
         /// <summary>
         /// Идентификатор сущности.
         /// </summary>
-        public String Id { get; set; }
+        public ObjectId Id { get; set; }
     }
 }

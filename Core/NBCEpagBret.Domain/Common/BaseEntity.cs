@@ -1,3 +1,4 @@
+using MongoDB.Bson;
 using NBCEpagBret.Domain.Common.Interfaces;
 
 namespace NBCEpagBret.Domain.Common
@@ -8,6 +9,6 @@ namespace NBCEpagBret.Domain.Common
     public abstract class BaseEntity : IEntity
     {
         /// <inheritdoc/>
-        public String Id { get; set; } = default!;
+        public ObjectId Id { get; set; } = default!;
     }
 }
