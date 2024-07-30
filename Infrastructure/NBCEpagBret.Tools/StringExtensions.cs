@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace NBCEpagBret.Tool
 {
     public static class StringExtensions
@@ -13,7 +15,16 @@ namespace NBCEpagBret.Tool
             {
                 return String.Empty;
             }
-            return Char.ToUpper(value[0]) + value[1..].ToLower();
+            var result = new StringBuilder();
+            if (value.Length > 1)
+            {
+                result.Append(Char.ToUpper(value[0])).Append(value[1..].ToLower());
+            }
+            else
+            {
+                result.Append(Char.ToUpper(value[0]));
+            }
+            return result.ToString();
         }
     }
 }
