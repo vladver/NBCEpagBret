@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\..\Infrastructure\NBCEpagBret.Tools\NBCEpagBret.Tools.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using NBCEpagBret.Domain.Common;
+using NBCEpagBret.Tool;
 
 namespace NBCEpagBret.Domain.Entities.Security
 {
@@ -41,13 +41,13 @@ namespace NBCEpagBret.Domain.Entities.Security
         {
             get
             {
-                var result = new StringBuilder(Surname);
+                var result = new StringBuilder(Surname.FirstCharToUpper());
                 if (!String.IsNullOrEmpty(Name))
                 {
-                    result.Append(' ').Append(Name);
+                    result.Append(' ').Append(Name.FirstCharToUpper());
                     if (!String.IsNullOrEmpty(Patronymic))
                     {
-                        result.Append(' ').Append(Patronymic);
+                        result.Append(' ').Append(Patronymic.FirstCharToUpper());
                     }
                 }
                 return result.ToString();
@@ -61,7 +61,7 @@ namespace NBCEpagBret.Domain.Entities.Security
         {
             get
             {
-                var result = new StringBuilder(Surname);
+                var result = new StringBuilder(Surname.FirstCharToUpper());
                 if (!String.IsNullOrEmpty(Name))
                 {
                     result.Append(' ')
