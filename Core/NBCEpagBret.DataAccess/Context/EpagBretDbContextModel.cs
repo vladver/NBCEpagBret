@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using NBCEpagBret.DataAccess.Configurations.Security;
 
 namespace NBCEpagBret.DataAccess
 {
@@ -7,6 +8,8 @@ namespace NBCEpagBret.DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }

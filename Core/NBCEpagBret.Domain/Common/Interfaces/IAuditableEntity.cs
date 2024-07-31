@@ -1,4 +1,5 @@
 using MongoDB.Bson;
+using NBCEpagBret.Domain.Entities.Security;
 
 namespace NBCEpagBret.Domain.Common.Interfaces
 {
@@ -11,7 +12,12 @@ namespace NBCEpagBret.Domain.Common.Interfaces
         /// <summary>
         /// Идентификатор пользователя, создавшего сущность.
         /// </summary>
-        ObjectId? CreatedBy { get; set; }
+        ObjectId? CreatedById { get; set; }
+
+        /// <summary>
+        /// Пользователь, создавший сущность.
+        /// </summary>
+        User? CreatedBy { get; set;}
 
         /// <summary>
         /// Дата и время создания сущности.
@@ -21,7 +27,12 @@ namespace NBCEpagBret.Domain.Common.Interfaces
         /// <summary>
         /// Дата и время последнего изменения сущности.
         /// </summary>
-        ObjectId? UpdatedBy { get; set; }
+        ObjectId? UpdatedById { get; set; }
+
+        /// <summary>
+        /// Пользователь, последним изменивший сущность.
+        /// </summary>
+        User? UpdatedBy { get; set;}
 
         /// <summary>
         /// Идентификатор пользователя, последним изменившем сущность.

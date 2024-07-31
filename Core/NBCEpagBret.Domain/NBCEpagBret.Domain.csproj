@@ -10,7 +10,9 @@
         <ProjectReference Include="..\..\Infrastructure\NBCEpagBret.Tools\NBCEpagBret.Tools.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="MongoDB.Driver" Version="2.28.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MongoDB.Driver" Version="2.27.0" />
     </ItemGroup>
 
 </Project>
